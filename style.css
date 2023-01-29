@@ -249,6 +249,9 @@ a {
     justify-content: center;
     gap: 6rem;
   }
+  .banner .banner-content {
+    padding: 0 3rem;
+  }
   .banner .banner-content p {
     width: 100%;
   }
@@ -281,11 +284,12 @@ a {
   color: white;
   text-transform: uppercase;
   font-size: 6rem;
-  padding: 1rem 3.5rem;
+  padding: 1rem 0;
   border: 1px solid #37AFA8;
   position: relative;
   overflow: hidden;
   text-align: center;
+  width: 50%;
 }
 .skills .skills-content h1::before {
   content: "";
@@ -342,6 +346,11 @@ a {
     display: none;
   }
 }
+@media screen and (max-width: 800px) {
+  .skills .skills-content h1 {
+    font-size: 2rem;
+  }
+}
 .projects {
   height: 100vh;
   display: flex;
@@ -353,11 +362,12 @@ a {
   color: white;
   text-transform: uppercase;
   font-size: 6rem;
-  padding: 1rem 3.5rem;
+  padding: 1rem 0;
   border: 1px solid #37AFA8;
   position: relative;
   overflow: hidden;
   text-align: center;
+  width: 50%;
 }
 .projects h1::before {
   content: "";
@@ -448,7 +458,6 @@ a {
     font-size: 4rem;
   }
   .projects .projects-container {
-    max-height: 35vh;
     min-width: 400px;
   }
   .projects .projects-container .project-detail .project-number .img-container h2 {
@@ -466,8 +475,10 @@ a {
   }
 }
 @media screen and (max-width: 800px) {
+  .projects h1 {
+    font-size: 2rem;
+  }
   .projects .projects-container {
-    max-height: 35vh;
     width: 90%;
     min-width: 300px;
   }
@@ -479,6 +490,9 @@ a {
     font-size: 3rem;
   }
   .projects .projects-container .project-detail .project-number .img-container img {
+    width: 300px;
+  }
+  .projects .projects-container .project-detail p {
     width: 300px;
   }
 }
@@ -497,11 +511,12 @@ a {
   color: white;
   text-transform: uppercase;
   font-size: 6rem;
-  padding: 1rem 3.5rem;
+  padding: 1rem 0;
   border: 1px solid #37AFA8;
   position: relative;
   overflow: hidden;
   text-align: center;
+  width: 50%;
 }
 .cv h1::before {
   content: "";
@@ -534,39 +549,9 @@ a {
   font-weight: 400;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1070px) {
   .cv h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 6rem;
-    padding: 1rem 3.5rem;
-    border: 1px solid #37AFA8;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
     font-size: 4rem;
-  }
-  .cv h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    z-index: -1;
-    transform: translateX(-100%);
-    transition: 0.3s;
-  }
-  .cv h1:hover::before {
-    transform: translateX(0);
-  }
-  .cv h1:hover {
-    color: black;
-  }
-  .cv i {
-    color: red;
-    margin: 0 0.3rem;
   }
   .cv .titles .sub-titles .topic {
     font-size: smaller;
@@ -575,42 +560,33 @@ a {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   .cv h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 6rem;
-    padding: 1rem 3.5rem;
-    border: 1px solid #37AFA8;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    font-size: 4rem;
-  }
-  .cv h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    z-index: -1;
-    transform: translateX(-100%);
-    transition: 0.3s;
-  }
-  .cv h1:hover::before {
-    transform: translateX(0);
-  }
-  .cv h1:hover {
-    color: black;
+    font-size: 2rem;
   }
   .cv i {
-    color: red;
-    margin: 0 0.1rem;
+    margin: 0 0.3rem;
   }
-  .cv .titles {
-    padding-left: 1.4rem;
+  .cv .titles .sub-titles .topic {
+    font-size: smaller;
+  }
+  .cv .titles .sub-titles .topic-subtitle {
+    font-size: 0.8rem;
+  }
+  .cv .titles .sub-titles td {
+    font-size: 0.7rem;
+  }
+  .cv .titles .sub-titles td i {
+    font-size: 1rem;
+    margin-right: 0.4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cv h1 {
+    font-size: 2rem;
+  }
+  .cv i {
+    margin: 0 0.1rem;
   }
   .cv .titles .sub-titles .topic {
     font-size: smaller;
@@ -630,10 +606,12 @@ a {
   color: white;
   text-transform: uppercase;
   font-size: 6rem;
-  padding: 1rem 3.5rem;
+  padding: 1rem 0;
   border: 1px solid #37AFA8;
   position: relative;
   overflow: hidden;
+  text-align: center;
+  width: 50%;
 }
 .contact h1::before {
   content: "";
@@ -682,72 +660,19 @@ a {
 }
 
 @media screen and (max-width: 1070px) {
-  .contact {
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-  }
   .contact h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 3rem;
-    padding: 1rem 3.5rem;
-    border: 1px solid #37AFA8;
-    position: relative;
-    overflow: hidden;
-  }
-  .contact h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    z-index: -1;
-    transform: translateX(-100%);
-    transition: 0.3s;
-  }
-  .contact h1:hover::before {
-    transform: translateX(0);
-  }
-  .contact h1:hover {
-    color: black;
-  }
-  .contact div {
-    display: flex;
-    flex-flow: column;
-  }
-  .contact div div {
-    display: flex;
-    flex-flow: column;
+    font-size: 4rem;
   }
   .contact div label {
-    color: #37AFA8;
-    font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    text-transform: uppercase;
     text-align: center;
   }
   .contact div p {
-    color: white;
-    padding: 1rem;
-    border: 1px solid #37AFA8;
     margin-bottom: 1rem;
     text-align: center;
   }
-  .contact div p a {
-    color: #37AFA8;
-    margin-left: 1rem;
-    transition: 0.3s;
-  }
-  .contact div p a:hover {
-    color: red;
-  }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   .contact h1 {
     font-size: 2rem;
   }
