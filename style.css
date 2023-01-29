@@ -660,6 +660,9 @@ a {
 }
 
 @media screen and (max-width: 1070px) {
+  .contact div {
+    flex-flow: column;
+  }
   .contact h1 {
     font-size: 4rem;
   }
