@@ -27,7 +27,6 @@ window.onscroll = function (){
     } else{
         stickyContainer.style.display = "none";
     }
-    
 }
 
 function toggleMenu() {
